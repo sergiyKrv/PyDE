@@ -1,5 +1,6 @@
 import pygame
-import mouse
+import modules.mouse as mouse
+import modules.exe as exe
 
 # Ініціалізація Pygame
 pygame.init()
@@ -16,12 +17,12 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+
+
     # Очищення екрану
     screen.fill(BG)
-
-    # Малювання спрайта, що слідує за мишею
-    mouse.simply_cursor(screen, 10, 10)  # Розмір спрайта (10x10 пікселів)
-
+    # Мишка
+    mouse.simply_cursor(screen, 10, 20)  # Розмір спрайта (10x20 пікселів)
     # Оновлення екрану
     pygame.display.flip()
 
